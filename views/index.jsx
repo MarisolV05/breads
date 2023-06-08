@@ -1,5 +1,4 @@
 const React = require('react')
-const breads = require('../controllers/breads_controllers')
 const Default = require('./layout/default')
 
 function Index ({breads}) {
@@ -17,6 +16,10 @@ function Index ({breads}) {
             }) 
           }
         </ul>
+        <div className="newButton">
+  <a href="/breads/new"><button>Add a new bread</button></a>
+</div>
+
       </Default>
       
     )

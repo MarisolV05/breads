@@ -13,10 +13,10 @@ function Show ({bread}) {
       </p>
       <img src={bread.image} alt={bread.name} />
       <li>
-        <a href="/breads">Go home</a>
-      </li>
+         <a href="/breads">Go home</a>
+         </li>
+   
     </Default>
     )
 }
-
 module.exports = Show

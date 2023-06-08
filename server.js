@@ -10,6 +10,8 @@ console.log(PORT)
 const breadsControllers = require('./controllers/breads_controllers')
 app.use('/breads', breadsControllers)
 app.use(express.static('public'))
+// MIDDLEWARE
+app.use(express.urlencoded({extended: true}))
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
