@@ -32,11 +32,6 @@ app.use('/breads', breadsController)
 const bakersController = require('./controllers/bakers_controller.js')
 app.use('/bakers', bakersController)
 
-constPORT = process.env.PORT || 5000
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true},
-    () => {console.log('connected to : ', process.env.MONGO_URI)}
-    )
-
 // 404 Page
 app.get('*', (req, res) => {
     res.send('404')

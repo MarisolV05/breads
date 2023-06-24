@@ -16,6 +16,7 @@ baker.get('/', (req, res) => {
 // Show: 
 baker.get('/:id', (req, res) => {
     Baker.findById(req.params.id)
+    
     .populate({
         path: 'breads',
         options: {limit:5}
@@ -37,6 +38,7 @@ baker.delete('/:id', (req, res) => {
         console.log("Error", err)
     })
 })
+
 
 baker.get('/data/seed', (req, res) => {
     Baker.insertMany(bakerSeedData)
