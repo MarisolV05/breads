@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layout/default')
 
-function New () {
+function New ({bakers}) {
     return (
       <Default>
         <h2>Add a new bread</h2>
@@ -13,11 +13,11 @@ function New () {
             id="name"
             required
           />
-          <label htmlFor="image">Image</label>
+         <label htmlFor="image">Image</label>
           <input
             type="url"
             name="image"
-            title="Include http://" 
+            title="Include http://"
             />
           <label htmlFor="hasGluten">Has Gluten?</label>
           <input
@@ -27,15 +27,22 @@ function New () {
             defaultChecked
           />
           <br />
+          <label htmlFor="baker">Baker</label>
+          <select name="baker" id="baker">
+            {bakers.map((baker) => {
+                 return (
+                  <option value={baker.id} key={baker.id}>{baker.name}</option>
+                )
+               })}
+            
+          </select>
           <input type="submit"/>
         </form>
-        <div className="backButton">
-  <a href="/breads"><button>Go back to the index</button></a>
-</div>
-
+            <div className="backButton">
+                <a href="/breads"><button>Go back to the index</button></a>
+            </div>
       </Default>
     )
 }
 
 module.exports = New
-

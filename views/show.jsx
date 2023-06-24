@@ -5,7 +5,7 @@ function Show ({bread, id}) {
   console.log(bread.name)
     return (
       <Default>
-      <h3>{bread.name}</h3>
+<h3>{bread.name}</h3>
       <p>
         and it
         {bread.hasGluten ? <span> does </span> : <span> does NOT </span>}
@@ -23,5 +23,4 @@ function Show ({bread, id}) {
     </Default>
     )
 }
-
 module.exports = Show
